@@ -1,6 +1,10 @@
 import pygame
 from random import randint,uniform
 from os.path import join
+import os
+
+dir = 'D:\\code\\python vs code\\pyton Exercises\\PYTHON GAMES\\Space Shooter'
+os.chdir(dir)
 # import time
 
 class player (pygame.sprite.Sprite):
@@ -122,6 +126,7 @@ def display_score(score):
     display_text(str(highscore),(240,240,240),(screen_width -110,screen_height - 30), True,(20,12),(0,-8),5, 10)
     if game_over:
         display_text('Press SPACE to Play Again',(240,240,240),(screen_width/2, screen_height - 120),False)
+
 def get_highscore(score):
     score = int(score)
     try:
@@ -135,7 +140,6 @@ def get_highscore(score):
     if score > highscore:
         highscore = score
     return highscore
-
 
 #screen Dimensions
 pygame.font.init()
@@ -197,6 +201,7 @@ while not exit_game:
                     exit_game = True
                 if event.key == pygame.K_SPACE:
                     game_over = False
+
     else:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

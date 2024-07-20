@@ -1,11 +1,12 @@
 from settings import *
 from sprites import *
+from os import chdir
 from player import *
 from groups import AllSprite
 from random import randint,choice
 from pytmx.util_pygame import load_pygame
 
-
+chdir('D:\\code\\python vs code\\pyton Exercises\\PYTHON GAMES\\vampire survivors')
 class Game:
     def __init__(self):
     # creating Display 
